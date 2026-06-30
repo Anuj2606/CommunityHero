@@ -1,211 +1,268 @@
-# 🏙️ FixMyCity
+# FixMyCity
 
-> **An AI-Powered Civic Issue Reporting & Municipal Management Platform**
+## Civic Issue Reporting & Municipal Management Platform
 
-FixMyCity is a modern civic engagement platform that enables citizens to report public infrastructure issues while helping municipal authorities efficiently manage, prioritize, and resolve them using artificial intelligence and real-time collaboration.
+FixMyCity is an civic issue reporting and municipal management platform that enables citizens to report public infrastructure issues while helping municipal authorities efficiently manage, prioritize, and resolve complaints through AI-assisted workflows.
 
-Built with **React, TypeScript, Firebase, Google Gemini AI, and Google Maps APIs**, the platform streamlines the complete lifecycle of civic complaint management—from issue reporting to resolution.
-
----
-
-## 📌 Problem Statement
-
-Urban residents frequently encounter issues such as:
-
-- 🛣️ Potholes
-- 💧 Water leakages
-- 💡 Broken streetlights
-- 🗑️ Garbage accumulation
-- 🌊 Drainage blockages
-- 🌳 Public infrastructure damage
-
-Traditional complaint systems are often slow, lack transparency, and provide little visibility into the resolution process.
-
-**FixMyCity** bridges the communication gap between citizens and municipal authorities through an intelligent, transparent, and collaborative digital platform.
+The platform combines Google's AI and cloud technologies to improve transparency, reduce duplicate complaints, streamline municipal operations, and provide citizens with real-time visibility into the status of their reports.
 
 ---
 
-# ✨ Features
+## Overview
 
-## 👥 Citizen Portal
+Urban residents frequently encounter issues such as potholes, water leakages, overflowing garbage bins, broken streetlights, drainage blockages, and damaged public infrastructure. Traditional complaint systems are often slow, fragmented, and lack transparency.
 
-- 🔐 Secure Google Sign-In
-- 📝 AI-assisted issue reporting
-- 📷 Image upload support
-- 📍 GPS & manual location selection
-- 🤖 AI-generated issue summaries
-- 🏷️ Automatic issue categorization
-- ⚠️ Severity prediction
-- 📌 Duplicate issue detection
-- 🤝 Community confirmation
-- 🗺️ Interactive issue map
-- 🔔 Real-time notifications
-- 📊 Personal complaint history
-- 📍 Live issue tracking
+FixMyCity modernizes this process by allowing citizens to securely report issues with supporting images and location data while enabling municipal administrators to verify, assign, monitor, and resolve complaints through a centralized dashboard.
 
 ---
 
-## 🏛️ Administrator Portal
+# Application Preview
 
-- 📋 Issue Management Dashboard
-- 🏢 Department assignment
-- 👨‍🔧 Officer assignment
-- 📈 Reports & Insights Dashboard
-- 🔍 Global Search & Operations Center
-- 📊 Analytics & Performance Monitoring
-- ⏱️ Expected Resolution Time Monitoring
-- 📤 Resolution evidence upload
-- 📢 Citizen notification management
+## Landing Page
+
+![Landing Page](docs/screenshots/landing-page.png)
 
 ---
 
-## 🤖 AI Capabilities
+## Citizen Dashboard
 
-Powered by **Google Gemini**
-
-- AI issue summarization
-- Automatic category detection
-- Severity estimation
-- Department recommendation
-- Duplicate complaint detection
-- Report quality analysis
-- Community insights generation
+![Citizen Dashboard](docs/screenshots/citizen-dashboard.png)
 
 ---
 
-# 🏗️ System Workflow
+## Report Issue
+
+![Report Issue](docs/screenshots/report-issue.png)
+
+---
+
+## Community Map
+
+![Community Map](docs/screenshots/community-map.png)
+
+---
+
+## Administrator Dashboard
+
+![Administrator Dashboard](docs/screenshots/admin-dashboard.png)
+
+---
+
+## Issue Management
+
+![Issue Management](docs/screenshots/issue-management.png)
+
+---
+
+## Reports & Insights
+
+![Reports](docs/screenshots/analytics.png)
+
+---
+
+# Features
+
+## Citizen Portal
+
+- Secure Google Sign-In
+- AI-assisted issue reporting
+- Image upload support
+- GPS and manual location selection
+- AI-generated issue summaries
+- Automatic issue categorization
+- Duplicate issue detection
+- Community confirmation
+- Real-time issue tracking
+- Interactive community map
+- Personal complaint history
+- Notifications
+
+---
+
+## Administrator Portal
+
+- Issue Management Dashboard
+- Department assignment
+- Officer assignment
+- Status management
+- Resolution evidence upload
+- Reports & Insights
+- Global Search
+- Operations Center
+- Notifications
+- Performance monitoring
+
+---
+
+## Google Gemini
+
+Google Gemini is integrated into FixMyCity to enhance the quality and efficiency of civic issue management. By analyzing citizen reports, it helps streamline municipal workflows through:
+
+- Intelligent issue summarization
+- Automatic issue categorization
+- Severity and priority assessment
+- Municipal department recommendation
+- Duplicate report identification
+- Community insights and trend analysis
+
+---
+
+# System Workflow
 
 ```text
 Citizen Login
-      │
-      ▼
-Report Civic Issue
-      │
-      ▼
+        │
+        ▼
+Report Issue
+        │
+        ▼
 Upload Image
-      │
-      ▼
-GPS / Manual Location
-      │
-      ▼
-Gemini AI Analysis
-      │
-      ▼
-Issue Summary
-      │
-      ▼
+        │
+        ▼
+Location Selection
+        │
+        ▼
+AI Analysis
+        │
+        ▼
 Duplicate Detection
-      │
-      ▼
+        │
+        ▼
 Submit Report
-      │
-      ▼
+        │
+        ▼
 Cloud Firestore
-      │
-      ▼
+        │
+        ▼
 Administrator Dashboard
-      │
-      ▼
+        │
+        ▼
 Department Assignment
-      │
-      ▼
+        │
+        ▼
 Status Updates
-      │
-      ▼
-Resolution
-      │
-      ▼
+        │
+        ▼
+Issue Resolution
+        │
+        ▼
 Citizen Notification
 ```
 
 ---
 
-# 🏛️ Architecture
+# System Architecture
 
 ```text
-                 Citizens
-                     │
-                     ▼
-        React + TypeScript Frontend
-                     │
-     ┌───────────────┼────────────────┐
-     ▼               ▼                ▼
-Firebase Auth   Google Gemini     Google Maps
-                     │
-                     ▼
-             Cloud Firestore
-                     │
-                     ▼
-        Administrator Dashboard
-                     │
-                     ▼
-             Issue Resolution
+                        Citizens
+                            │
+                            ▼
+              React + TypeScript Frontend
+                            │
+        ┌───────────────────┼───────────────────┐
+        ▼                   ▼                   ▼
+ Firebase Authentication  Gemini API   Google Maps APIs
+                            │
+                            ▼
+                    Cloud Firestore
+                            │
+                            ▼
+                Administrator Dashboard
+                            │
+                            ▼
+                    Issue Resolution
 ```
 
 ---
 
-# 🛠️ Technology Stack
+# Technology Stack
 
 | Category | Technology |
-|----------|------------|
+|-----------|------------|
 | Frontend | React.js, TypeScript, Vite |
 | Styling | Tailwind CSS |
-| Icons | Lucide React |
-| Animations | Motion |
-| Charts | Recharts |
-| Maps | Leaflet, OpenStreetMap |
 | Backend | Node.js, Express.js |
 | Database | Cloud Firestore |
 | Authentication | Firebase Authentication |
-| AI | Google Gemini API |
-| Development | Google AI Studio |
+| Artificial Intelligence | Google Gemini API |
+| Maps | Google Maps API, Google Places API, Google Geocoding API, Browser Geolocation API |
 | Hosting | Firebase Hosting |
-| Cloud | Firebase Cloud Functions |
+| Cloud Services | Firebase Cloud Functions |
 
 ---
 
-# ☁️ Google Technologies Used
+# Google Technologies Used
 
-- ✅ Google AI Studio
-- ✅ Gemini API
-- ✅ Firebase Authentication
-- ✅ Cloud Firestore
-- ✅ Firebase Hosting
-- ✅ Firebase Cloud Functions
-- ✅ Google Places API
-- ✅ Google Geocoding API
-- ✅ Browser Geolocation API
+| Technology | Purpose |
+|------------|---------|
+| Google AI Studio | AI-assisted application development |
+| Gemini API | Issue analysis, summarization, categorization, and recommendations |
+| Firebase Authentication | Secure Google Sign-In |
+| Cloud Firestore | Real-time database |
+| Firebase Hosting | Web application hosting |
+| Firebase Cloud Functions | Background automation and notifications |
+| Google Places API | Address autocomplete |
+| Google Geocoding API | Address to GPS conversion |
+| Browser Geolocation API | Current location detection |
 
 ---
 
-# 🚀 Installation
+# Project Structure
 
-Clone the repository
-
-```bash
-git clone https://github.com/yourusername/FixMyCity.git
+```text
+FixMyCity
+│
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── hooks/
+│   ├── pages/
+│   ├── services/
+│   ├── types/
+│   └── utils/
+│
+├── functions/
+│
+├── public/
+│
+├── docs/
+│   └── screenshots/
+│
+├── firebase.json
+├── firestore.rules
+├── package.json
+└── README.md
 ```
 
-Navigate into the project
+---
+
+# Installation
+
+Clone the repository.
 
 ```bash
-cd FixMyCity
+git clone https://github.com/YOUR_USERNAME/CommunityHero.git
 ```
 
-Install dependencies
+Navigate into the project.
+
+```bash
+cd CommunityHero
+```
+
+Install dependencies.
 
 ```bash
 npm install
 ```
 
-Create a `.env` file
+Create a `.env` file.
 
 ```env
 GEMINI_API_KEY=YOUR_API_KEY
-GOOGLE_MAPS_API_KEY=YOUR_API_KEY
 ```
 
-Start the development server
+Run the development server.
 
 ```bash
 npm run dev
@@ -213,70 +270,34 @@ npm run dev
 
 ---
 
-# 🔥 Firebase Setup
+# Firebase Configuration
 
-Configure:
+Configure the following Firebase services before running the project.
 
 - Firebase Authentication
 - Cloud Firestore
 - Firebase Hosting
 - Cloud Functions
 
-Update your Firebase configuration inside the project before running.
+Update the Firebase configuration with your own project credentials.
 
 ---
 
-# 📷 Screenshots
+# Future Enhancements
 
-> Add screenshots of:
-
-- Landing Page
-- Citizen Dashboard
-- Report Issue
-- Community Map
-- Administrator Dashboard
-- Issue Management
-- Reports & Insights
+- Mobile application
+- Email notifications
+- Push notifications
+- Predictive maintenance analytics
+- AI-based infrastructure damage detection
+- Multilingual support
 
 ---
 
-# 🌍 Impact
+# Project Impact
 
-FixMyCity transforms traditional civic complaint management into an intelligent digital ecosystem.
+FixMyCity improves communication between citizens and municipal authorities by providing an intelligent, transparent, and collaborative platform for reporting and managing civic issues.
 
-The platform:
-
-- Improves transparency
-- Reduces duplicate complaints
-- Accelerates issue resolution
-- Enhances community participation
-- Enables smarter municipal decision-making
-- Strengthens communication between citizens and local authorities
+The platform reduces duplicate reports, improves operational efficiency, supports informed decision-making through AI-assisted analysis, and enables citizens to monitor the complete lifecycle of their complaints in real time.
 
 ---
-
-# 🔮 Future Enhancements
-
-- 📱 Android & iOS application
-- 📧 Email notifications
-- 🌐 Multi-language support
-- 📍 Live officer tracking
-- 📸 AI-based image damage assessment
-- 📊 Predictive maintenance analytics
-- 🔔 Push notifications
-
----
-
-# 👨‍💻 Team
-
-Developed as part of the **Vibe2Ship Hackathon**.
-
----
-
-# 📄 License
-
-This project is developed for educational and hackathon purposes.
-
----
-
-# ⭐ If you found this project interesting, consider giving it a star!
