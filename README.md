@@ -36,6 +36,12 @@ FixMyCity modernizes this process by allowing citizens to securely report issues
 
 ---
 
+## Duplicate Report Detection
+
+To reduce redundant complaints, FixMyCity compares newly submitted reports with existing nearby issues. If a similar issue is detected, citizens are informed and encouraged to support the existing report instead of creating another one.
+
+![Duplicate Detection](docs/screenshots/ai-review.png)
+
 ## Community Map
 
 ![Community Map](docs/screenshots/community-map.png)
