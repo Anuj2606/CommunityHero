@@ -2,7 +2,7 @@
 
 ## Civic Issue Reporting & Municipal Management Platform
 
-FixMyCity is an civic issue reporting and municipal management platform that enables citizens to report public infrastructure issues while helping municipal authorities efficiently manage, prioritize, and resolve complaints through AI-assisted workflows.
+FixMyCity is a civic issue reporting and municipal management platform that enables citizens to report public infrastructure issues while helping municipal authorities efficiently manage, prioritize, and resolve complaints through AI-assisted workflows.
 
 The platform combines Google's AI and cloud technologies to improve transparency, reduce duplicate complaints, streamline municipal operations, and provide citizens with real-time visibility into the status of their reports.
 
@@ -183,35 +183,38 @@ Citizen Notification
 
 # Technology Stack
 
-| Category | Technology |
-|-----------|------------|
-| Frontend | React.js, TypeScript, Vite |
-| Styling | Tailwind CSS |
-| Backend | Node.js, Express.js |
-| Database | Cloud Firestore |
-| Authentication | Firebase Authentication |
-| Artificial Intelligence | Google Gemini API |
-| Maps | Google Maps API, Google Places API, Google Geocoding API, Browser Geolocation API |
-| Hosting | Firebase Hosting |
-| Cloud Services | Firebase Cloud Functions |
-
+| Category | Technologies | Purpose |
+|-----------|--------------|---------|
+| Frontend | React.js, TypeScript, Vite | Builds a fast, responsive, and component-based user interface. |
+| Styling & UI | Tailwind CSS, Lucide React | Creates a clean, responsive interface with scalable icons. |
+| Backend | Node.js, Express.js | Handles server-side APIs and application logic. |
+| Database | Cloud Firestore | Stores users, civic reports, notifications, and application data in real time. |
+| Authentication | Firebase Authentication | Provides secure Google Sign-In and role-based authentication. |
+| AI & Intelligent Services | Google Gemini API | Generates issue summaries, categorizes reports, estimates severity, recommends departments, and identifies duplicate reports. |
+| Maps & Location | Leaflet, OpenStreetMap, Browser Geolocation API | Displays reported issues on an interactive map and detects the user's current location. |
+| Hosting | Firebase Hosting | Deploys and hosts the production-ready web application. |
 ---
 
 # Google Technologies Used
 
 | Technology | Purpose |
 |------------|---------|
-| Google AI Studio | AI-assisted application development |
-| Gemini API | Issue analysis, summarization, categorization, and recommendations |
-| Firebase Authentication | Secure Google Sign-In |
-| Cloud Firestore | Real-time database |
-| Firebase Hosting | Web application hosting |
-| Firebase Cloud Functions | Background automation and notifications |
-| Google Places API | Address autocomplete |
-| Google Geocoding API | Address to GPS conversion |
-| Browser Geolocation API | Current location detection |
+| Google AI Studio | Used to prototype, develop, and integrate AI-powered features throughout the application. |
+| Google Gemini API | Performs intelligent issue summarization, automatic categorization, severity assessment, department recommendation, and duplicate issue identification. |
+| Firebase Authentication | Enables secure Google Sign-In for citizens and administrators. |
+| Cloud Firestore | Stores user profiles, issue reports, notifications, and application data in real time. |
+| Firebase Hosting | Hosts and deploys the web application securely. |
+| Browser Geolocation API | Retrieves the user's current location for accurate issue reporting. |
 
 ---
+# Open Source Libraries
+
+| Library | Purpose |
+|---------|---------|
+| Leaflet | Interactive open-source mapping library used for the community map. |
+| OpenStreetMap | Provides open-source map tiles and geographic data. |
+| Recharts | Generates responsive analytics and dashboard visualizations. |
+| Lucide React | Open-source SVG icon library used throughout the application. |
 
 # Project Structure
 
