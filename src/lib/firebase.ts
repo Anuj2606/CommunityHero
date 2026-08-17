@@ -5,7 +5,7 @@ import firebaseConfig from '../../firebase-applet-config.json';
 
 // Explicit config requested by the user, with fallback from imported json
 const finalFirebaseConfig = {
-  apiKey: firebaseConfig?.apiKey || "AIzaSyBHy56V8eR-wHqNquZvxCCoiIHDJyvgmPQ",
+  apiKey: firebaseConfig?.apiKey || "[GCP_API_KEY]",
   authDomain: firebaseConfig?.authDomain || "mimetic-rig-9lll2.firebaseapp.com",
   projectId: firebaseConfig?.projectId || "mimetic-rig-9lll2",
   storageBucket: firebaseConfig?.storageBucket || "mimetic-rig-9lll2.firebasestorage.app",
@@ -13,11 +13,11 @@ const finalFirebaseConfig = {
   appId: firebaseConfig?.appId || "1:150360520684:web:fbba91bc7556136eaff2c9",
 };
 
-const app = initializeApp(finalFirebaseConfig);
+export const app = initializeApp(finalFirebaseConfig);
 
 // If a specific firestore database ID is provided (e.g. for multi-db or custom instances in AI Studio),
 // initialize getFirestore with it, otherwise default.
-export const db = firebaseConfig?.firestoreDatabaseId
+export const db = firebaseConfig?.firestoreDatabaseId && firebaseConfig.firestoreDatabaseId !== "YOUR_DATABASE_ID"
   ? getFirestore(app, firebaseConfig.firestoreDatabaseId)
   : getFirestore(app);
 
